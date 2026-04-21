@@ -16,6 +16,9 @@ This is a dummy node graphql apollo server that returns mocked data and accepts 
 
 ```bash
 pnpm install
+pnpm run db:generate
+pnpm run db:migrate
+pnpm run db:seed
 pnpm run dev
 ```
 
