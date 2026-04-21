@@ -2,7 +2,7 @@ import { beforeAll, expect, test } from 'vitest';
 import { db } from '../db/client';
 import { users } from '../db/schema';
 import { resolvers } from '../graphql/resolvers';
-import { mockedListUsers } from './mockedListUsers';
+import { mockUsers } from './mockedListUsers';
 
 const getAllUsers = async (options?: { limit?: number }) => {
   return resolvers.Query.listUsers(
@@ -13,14 +13,14 @@ const getAllUsers = async (options?: { limit?: number }) => {
 
 beforeAll(async () => {
   await db.delete(users);
-  await db.insert(users).values(mockedListUsers.data).onConflictDoNothing();
+  await db.insert(users).values(mockUsers).onConflictDoNothing();
 });
 
 test('it should return all users', async () => {
   const data = await getAllUsers();
-  expect(data).toHaveLength(mockedListUsers.data.length);
+  expect(data).toHaveLength(mockUsers.length);
   expect([...(data ?? [])].sort((a, b) => a.id.localeCompare(b.id))).toEqual(
-    [...mockedListUsers.data].sort((a, b) => a.id.localeCompare(b.id)),
+    [...mockUsers].sort((a, b) => a.id.localeCompare(b.id)),
   );
 });
 
