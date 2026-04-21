@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "6",
-      "when": 1776792512026,
-      "tag": "0000_productive_harry_osborn",
-      "breakpoints": true
-    },
-    {
-      "idx": 1,
-      "version": "6",
-      "when": 1776801753396,
-      "tag": "0001_familiar_epoch",
+      "when": 1776806438663,
+      "tag": "0000_steep_wild_child",
       "breakpoints": true
     }
   ]
