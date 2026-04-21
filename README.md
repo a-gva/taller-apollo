@@ -16,7 +16,7 @@ Delivers a lightweight, testable GraphQL service demonstrating schema design, re
 
 ## Database Mock Data (SQlite)
 
-<img width="1274" height="532" alt="image" src="https://github.com/user-attachments/assets/a44f6fac-a334-4ebf-a639-eb23f3f74a73" />
+<img width="1036" height="369" alt="image" src="https://github.com/user-attachments/assets/2e812526-0bd8-4879-928f-7768500f109f" />
 
 ## How to run
 
