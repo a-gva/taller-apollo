@@ -4,10 +4,6 @@
 
 Implements a minimal **GraphQL API** in TypeScript/Node.js a fully automated test suite.
 
-- Added `User` schema with `getUser(id)` and `listUsers(limit)` queries
-- Implemented resolvers with proper null handling and limit support
-- Introduced Jest-based test suite covering
-
 Delivers a lightweight, testable GraphQL service demonstrating schema design, resolver logic, and testing best practices.
 
 ## Test Result
