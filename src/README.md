@@ -1,6 +1,4 @@
-Code challenge
-
-Title: Build and Test a Simple GraphQL API with Automated Test Suite
+A GraphQL API with Automated Test Suite
 
 Description:
 You are tasked with creating a minimal GraphQL API server and an automated test suite to validate its functionality, performance, and security aspects. This challenge focuses on your ability to design GraphQL schemas, implement resolvers, and write robust automated tests using TypeScript and Node.js.

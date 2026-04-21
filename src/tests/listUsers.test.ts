@@ -31,6 +31,7 @@ const getAllUsers = async (options?: { limit?: number }) => {
       age: z.number(),
     })
     .array()
+    // @ts-expect-error - data is unknown
     .safeParse(data?.data?.listUsers as unknown[]);
 
   return parsedData;
