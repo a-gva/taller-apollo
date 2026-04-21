@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest';
 import { z } from 'zod';
-import { mockListUsers } from './mockekListUsers';
+import { mockListUsers } from './mockedListUsers';
 
 const getAllUsers = async () => {
   const response = await fetch('http://localhost:4010/graphql', {
@@ -22,8 +22,6 @@ const getAllUsers = async () => {
     }),
   });
   const data = await response.json();
-
-  console.log(data);
   // zod validate
   const parsedData = z
     .object({
@@ -33,7 +31,7 @@ const getAllUsers = async () => {
       age: z.number(),
     })
     .array()
-    .safeParse(data?.data?.listUsers);
+    .safeParse(data?.data?.listUsers as unknown[]);
 
   return parsedData;
 };
