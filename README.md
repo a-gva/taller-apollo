@@ -16,15 +16,13 @@ Delivers a lightweight, testable GraphQL service demonstrating schema design, re
 
 ## Database Mock Data (SQlite)
 
-<img width="1036" height="369" alt="image" src="https://github.com/user-attachments/assets/2e812526-0bd8-4879-928f-7768500f109f" />
+<img width="1038" height="474" alt="image" src="https://github.com/user-attachments/assets/fdf08b93-1e6f-431b-9d8c-f22df3e123ce" />
 
 ## How to run
 
 ```bash
 pnpm install
-pnpm run db:generate
-pnpm run db:migrate
-pnpm run db:seed
+pnpm db:init
 pnpm run dev
 ```
 
