@@ -6,6 +6,7 @@ export const USERS_QUERY = gql`
       id
       name
       email
+      age
     }
   }
 `;

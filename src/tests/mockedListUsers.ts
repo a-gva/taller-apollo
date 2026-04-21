@@ -1,4 +1,4 @@
-export const mockListUsers = {
+export const mockedListUsers = {
   success: true,
   data: [
     {

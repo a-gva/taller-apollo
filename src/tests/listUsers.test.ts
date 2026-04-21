@@ -1,8 +1,8 @@
 import { expect, test } from 'vitest';
 import { z } from 'zod';
-import { mockListUsers } from './mockedListUsers';
+import { mockedListUsers } from './mockedListUsers';
 
-const getAllUsers = async () => {
+const getAllUsers = async (options?: { limit?: number }) => {
   const response = await fetch('http://localhost:4010/graphql', {
     method: 'POST',
     headers: {
@@ -11,7 +11,7 @@ const getAllUsers = async () => {
     body: JSON.stringify({
       query: `
         query {
-            listUsers {
+            listUsers(options: { limit: ${options?.limit ?? 100} }) {
                 id
                 name
                 email
@@ -38,7 +38,12 @@ const getAllUsers = async () => {
 
 test('it should return all users', async () => {
   const data = await getAllUsers();
-  console.log(data);
   expect(data?.success).toBe(true);
-  expect(data?.data).toEqual(mockListUsers.data);
+  expect(data?.data).toEqual(mockedListUsers.data);
+});
+
+test('it should limit the number of users returned', async () => {
+  const data = await getAllUsers({ limit: 1 });
+  expect(data?.success).toBe(true);
+  expect(data?.data.length).toBe(1);
 });

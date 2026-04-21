@@ -4,7 +4,6 @@ export const typeDefs = `#graphql
     name: String!
     email: String!
     age: Int
-    comments(limit: Int): [Comment!]!
   }
 
   input UserModifyInput {
